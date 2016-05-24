@@ -1,8 +1,18 @@
-current.u_original_body = producer.addinfo.getGlideObject().getQuestion().getLabel()  + " " + producer.addinfo + "\n"
+
+// Sets all users inputs equal to original body so items apper in body of ticket 
+current.u_original_body = 
+//producer.varname is the user input gets input and add's question title to new ticket 
+	  producer.addinfo.getGlideObject().getQuestion().getLabel()  + " " + producer.addinfo + "\n" 
+// getglideobject is var holding the user input info
 	+ producer.WAR.getGlideObject().getQuestion().getLabel() + " " + producer.WAR + "\n" 
+// getquestion and getlabel put the question name in body
 	+ producer.dbscr.getGlideObject().getQuestion().getLabel() + " " + producer.dbscr + "\n"
 	+ producer.offhours.getGlideObject().getQuestion().getLabel() + " " + producer.offhours + "\n"
 	+ producer.ENV.getGlideObject().getQuestion().getLabel() + " " + producer.ENV + "\n" 
 	+ producer.Time.getGlideObject().getQuestion().getLabel()  + " " + producer.Time + "\n";
+// to add new var simple cut and paste one of the lins and change .varname to correct name 
+// make sure to remove ; and then add it to the end 
+
+
 
 
