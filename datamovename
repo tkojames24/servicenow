@@ -10,7 +10,7 @@ current.u_original_body =
 	+ producer.offhours.getGlideObject().getQuestion().getLabel() + " " + producer.offhours + "\n"
 	+ producer.ENV.getGlideObject().getQuestion().getLabel() + " " + producer.ENV + "\n" 
 	+ producer.Time.getGlideObject().getQuestion().getLabel()  + " " + producer.Time + "\n";
-// to add new var simple cut and paste one of the lins and change .varname to correct name 
+// to add new var simple cut and paste one of the line and change .varname to correct name 
 // make sure to remove ; and then add it to the end 
 
 
