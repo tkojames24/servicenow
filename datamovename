@@ -9,7 +9,8 @@ current.u_original_body =
 	+ producer.dbscr.getGlideObject().getQuestion().getLabel() + " " + producer.dbscr + "\n"
 	+ producer.offhours.getGlideObject().getQuestion().getLabel() + " " + producer.offhours + "\n"
 	+ producer.ENV.getGlideObject().getQuestion().getLabel() + " " + producer.ENV + "\n" 
-	+ producer.Time.getGlideObject().getQuestion().getLabel()  + " " + producer.Time + "\n";
+	+ producer.startdep.getGlideObject().getQuestion().getLabel()  + " " + producer.startdep + "\n"
+	+ producer.endep.getGlideObject().getQuestion().getLabel()  + " " + producer.endep + "\n";
 // to add new var simple cut and paste one of the line and change .varname to correct name 
 // make sure to remove ; and then add it to the end 
 
