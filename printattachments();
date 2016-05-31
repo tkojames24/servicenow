@@ -1,0 +1,6 @@
+printattachments(); 
+ 
+function printattachments(){var gr =new GlideRecord('sys_attachment');
+    gr.addQuery('table_sys_id',current.sys_id);
+    gr.query();while(gr.next()){
+        template.print('Attachment: <a href="http://'+gs.getProperty("ucermtest")+'.service-now.com/sys_attachment.do?sys_id='+ gr.sys_id+'">'+ gr.file_name+'</a>');}}
