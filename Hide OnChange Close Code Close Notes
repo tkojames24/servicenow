@@ -1,0 +1,24 @@
+function onChange() {
+   var hide = true;
+
+      if (g_form.getControl('u_state')) {
+      var incident_state = g_form.getValue('u_state');
+      if (incident_state == '3' || incident_state == '4')
+         hide = false;
+   }
+   
+   if (hide) {
+      g_form.setDisplay('u_close_notes',false);
+      g_form.setMandatory('u_close_notes',false);
+      g_form.setDisplay('u_close_code',false);
+      g_form.setMandatory('u_close_code',false);
+	   g_form.setDisplay('u_time',false);
+      g_form.setMandatory('u_time',false);
+	  
+   } else {
+      g_form.setDisplay('u_close_notes',true);
+      g_form.setMandatory('u_close_notes',true);
+      g_form.setDisplay('u_close_code',true);
+      g_form.setMandatory('u_close_code',true);
+	   g_form.setDisplay('u_time',true);
+      g_form.setMandatory('u_time',true);
