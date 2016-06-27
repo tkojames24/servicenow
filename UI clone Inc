@@ -1,19 +1,18 @@
 //create a new Request record and populate fields
 var inc = new GlideRecord("incident");
+//this is where the fields are cloned to new ticket
 inc.short_description = current.short_description;
 inc.location = current.location;
 inc.watch_list = current.watch_list;
 inc.caller_id = current.caller_id;
-//inc.assigned_to = current.assigned_to;
-//inc.assignment_group = current.assignment_group;
-
 inc.Category = current.u_category;
 inc.u_original_body = current.u_original_body;
 inc.Priority = current.priority;
 inc.cmdb_ci = current.cmdb_ci;
 inc.comments = current.comments;
 inc.work_notes = current.work_notes;
-
+// set inc. variable to where you want the info to go
+// current.variable name is what you are cloning from 
 
 inc.insert();
 
