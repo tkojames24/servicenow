@@ -1,0 +1,32 @@
+//create a new Request record and populate fields
+var ss = new GlideRecord("u_sstech");
+//this is where the fields are cloned to new ticket
+ss.u_short_description = current.u_short_description;
+ss.watch_list = current.watch_list;
+ss.u_caller = current.u_caller;
+ss.u_Category = current.u_category;
+ss.u_original_body = current.u_original_body;
+ss.u_Priority = current.u_priority;
+ss.u_comments = current.u_comments;
+ss.u_work_notes = current.u_work_notes;
+// set inc. variable to where you want the info to go
+// current.variable name is what you are cloning from 
+
+ss.insert();
+
+//Copy any attachments from the incident record to the request record
+Packages.com.glide.ui.SysAttachment.copy("u_sstech", current.sys_id, "u_sstech", ss.sys_id);
+
+//update existing Incident record
+current.u_state = 2;
+current.u_work_comments = "This ticket has been duplicated to " + ss.u_number;
+current.active = false;
+current.update();
+
+//provide onscreen feedback and set URLs
+gs.addInfoMessage("Ticket " + ss.u_number + " created");
+action.setRedirectURL(ss);
+action.setReturnURL(current);
+
+
+
