@@ -22,7 +22,7 @@ Packages.com.glide.ui.SysAttachment.copy("incident", current.sys_id, "incident",
 
 //update existing Incident record
 current.state = 2;
-current.comments = "This incident has been duplicated to " + inc.number;
+current.work_notes = "This incident has been duplicated to " + inc.number;
 current.active = false;
 current.update();
 
