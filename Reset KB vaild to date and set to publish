@@ -8,6 +8,7 @@ current.valid_to = d.getDisplayValue();
 current.workflow_state = "published";
 // does not process any more workflows which stops the article from moving to next stage of workflow
 current.setWorkflow(false);
+//update changes
 current.update();
 
 
