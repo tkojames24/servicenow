@@ -1,0 +1,14 @@
+// loads d as current glide object
+var d = new GlideDate();
+// d is now 730 days in future
+d.addDaysUTC(730);
+// sets vaild to date to new var d
+current.valid_to = d.getDisplayValue();
+// sets article to workflow state published
+current.workflow_state = "published";
+// does not process any more workflows which stops the article from moving to next stage of workflow
+current.setWorkflow(false);
+current.update();
+
+
+
