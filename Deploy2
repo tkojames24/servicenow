@@ -1,4 +1,4 @@
-ar afterhours =  producer.afterhours.getGlideObject().getQuestion().getLabel()  + " " + producer.afterhours + "\n";
+var afterhours =  producer.afterhours.getGlideObject().getQuestion().getLabel()  + " " + producer.afterhours + "\n";
 // getglideobject is var holding the user input info
 var dba = producer.dbascript.getGlideObject().getQuestion().getLabel() + " " + producer.dbascript + "\n";
 var env = producer.env.getGlideObject().getQuestion().getLabel() + " " + producer.env + "\n";
