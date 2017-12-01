@@ -10,7 +10,7 @@ var staff = producer.dbplatform.getGlideObject().getQuestion().getLabel()  + " "
 
 //place all var that need to be in body into the array
 var array;
-array = [afterhours, dba, env, app, comment, dbaenv];
+array = [sdt,username,computer,poc,request,Team,staff];
 
 
 
