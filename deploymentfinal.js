@@ -27,14 +27,6 @@ current.setValue('short_description', 'Deployment of Application ' + app1);
 //gs.eventQueue('emailawesome', current, '', '');
 
 
-var connie = "coberholster@ucdavis.edu";
-var luke   = "lbchaney@ucdavis.edu";
-var danny  = "danly@ucdavis.edu";
-var leda = "lalafler@ucdavis.edu";
-
-
-
-var biteam =  [connie, luke, danny,  leda];
 
 
 // /do not use === it will not work. Ignore any errors given by IDE
