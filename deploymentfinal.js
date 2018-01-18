@@ -7,12 +7,12 @@ var comment = producer.addcomment.getGlideObject().getQuestion().getLabel()  + "
 var dbaenv = producer.dbplatform.getGlideObject().getQuestion().getLabel()  + " " + producer.dbplatform + "\n";
 var vn = producer.vn.getGlideObject().getQuestion().getLabel()  + " " + producer.vn + "\n";
 var emv = producer.emv.getGlideObject().getQuestion().getLabel()  + " " + producer.emv + "\n";
-var ibm = producer.ibm.getGlideObject().getQuestion().getLabel()  + " " + producer.ibm + "\n";
+var lbm = producer.ibm.getGlideObject().getQuestion().getLabel()  + " " + producer.lbmbm + "\n";
 var ltc = producer.ltc.getGlideObject().getQuestion().getLabel()  + " " + producer.ltc + "\n";
 
 
 //place all var that need to be in body into the array
-var array = [afterhours, dba, env, app, comment, dbaenv, vn, emv, ibm,ltc ];
+var array = [afterhours, dba, env, app, comment, dbaenv, vn, emv, lbm, ltc ];
 
 
 //var here are used to pass to the second ticket
