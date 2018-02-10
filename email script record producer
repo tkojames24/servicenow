@@ -1,0 +1,27 @@
+//this script allows use to send an email from record producer and place the variable into the body of the email and send it. It will track the email in the ticket.
+// Need to create a Record Producer with a variable made for the email. 
+
+
+var data =  producer.data + "\n";
+
+
+var array = [data];
+
+
+current.setValue('u_original_body', array.join(','));
+current.setValue('short_description', 'Edited this whith message you want' + data);
+
+
+
+
+var email = new GlideRecord('sys_email');
+email.initialize();
+email.subject = "Put text in here";
+email.body    = "Put text in here: " + "\n" + data;
+email.type    = 'send-ready';
+email.sys_created_on = gs.now();
+email.weight  = '60';
+email.instance  = current.sys_id;
+email.recipients = "email address you want";
+email.target_table = "incident"; // this adds the email to the ticket 
+email.insert();
